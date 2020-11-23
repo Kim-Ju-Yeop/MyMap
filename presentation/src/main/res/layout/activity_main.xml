@@ -22,12 +22,14 @@
             android:layout_above="@id/bottom_navigation_view"
             app:defaultNavHost="true"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:navGraph="@navigation/navigation"
             tools:ignore="FragmentTagUsage"/>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/drawable_navigation"
             android:layout_alignParentBottom="true"
             app:behavior_hideable="false"
             app:itemIconTint="@color/selector_navigation"

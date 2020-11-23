@@ -6,7 +6,7 @@
         android:title="@string/menu_home"/>
 
     <item
-        android:id="@+id/questionFragment"
+        android:id="@+id/qrCodeFragment"
         android:icon="@drawable/ic_qrcode"
         android:title="@string/menu_qrcode"/>
 
