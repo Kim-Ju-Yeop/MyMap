@@ -22,4 +22,5 @@
     <string name="text_blood">혈액형</string>
     <string name="text_address">주소</string>
     <string name="text_submit">확진자 등록</string>
+    <string name="text_hospital_email">병원 관계자의 이메일을 입력해주세요.</string>
 </resources>

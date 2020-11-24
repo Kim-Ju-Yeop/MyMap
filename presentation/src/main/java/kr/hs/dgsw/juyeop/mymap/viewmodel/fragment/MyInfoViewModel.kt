@@ -5,6 +5,7 @@ import io.reactivex.observers.DisposableSingleObserver
 import kr.hs.dgsw.juyeop.domain.entity.Member
 import kr.hs.dgsw.juyeop.domain.usecase.GetInformationUseCase
 import kr.hs.dgsw.juyeop.mymap.base.viewmodel.BaseViewModel
+import kr.hs.dgsw.juyeop.mymap.widget.SingleLiveEvent
 
 class MyInfoViewModel(
     private val getInformationUseCase: GetInformationUseCase
@@ -14,6 +15,8 @@ class MyInfoViewModel(
     val birth = MutableLiveData<String>()
     val blood = MutableLiveData<String>()
     val address = MutableLiveData<String>()
+
+    val onSubmitEvent = SingleLiveEvent<Unit>()
 
     init {
         getInformation()
@@ -34,5 +37,9 @@ class MyInfoViewModel(
                 e.printStackTrace()
             }
         })
+    }
+
+    fun submitEvent() {
+        onSubmitEvent.call()
     }
 }
