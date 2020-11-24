@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import kr.hs.dgsw.juyeop.data.util.Constants
+import kr.hs.dgsw.juyeop.data.util.TokenInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -28,12 +29,13 @@ class NetworkModule {
     @Provides
     @Singleton
     @Named("HTTP")
-    fun provideHttpClient(): OkHttpClient {
+    fun provideHttpClient(tokenInterceptor: TokenInterceptor): OkHttpClient {
         val interceptor = HttpLoggingInterceptor()
         interceptor.level = HttpLoggingInterceptor.Level.BODY
 
         val okHttpBuilder = OkHttpClient().newBuilder()
             .addInterceptor(interceptor)
+            .addInterceptor(tokenInterceptor)
 
         return okHttpBuilder.build()
     }
