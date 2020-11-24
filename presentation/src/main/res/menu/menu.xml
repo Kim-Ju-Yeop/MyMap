@@ -6,9 +6,9 @@
         android:title="@string/menu_home"/>
 
     <item
-        android:id="@+id/qrCodeFragment"
-        android:icon="@drawable/ic_qrcode"
-        android:title="@string/menu_qrcode"/>
+        android:id="@+id/gpsFragment"
+        android:icon="@drawable/ic_gps"
+        android:title="@string/menu_gps"/>
 
     <item
         android:id="@+id/myInfoFragment"

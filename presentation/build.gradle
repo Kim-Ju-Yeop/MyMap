@@ -79,6 +79,12 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.navVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$rootProject.navVersion"
 
+    // TimeLineView
+    implementation "com.github.vipulasri:timelineview:$rootProject.timeLineViewVersion"
+
+    // ZXing
+    implementation "com.journeyapps:zxing-android-embedded:$rootProject.zxingVersion"
+
     implementation project(":data")
     implementation project(":domain")
 }

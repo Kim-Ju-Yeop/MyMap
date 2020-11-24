@@ -10,9 +10,9 @@
         android:name="kr.hs.dgsw.juyeop.mymap.view.fragment.HomeFragment"
         android:label="fragment_home" />
     <fragment
-        android:id="@+id/qrCodeFragment"
-        android:name="kr.hs.dgsw.juyeop.mymap.view.fragment.QrCodeFragment"
-        android:label="fragment_qr_code" />
+        android:id="@+id/gpsFragment"
+        android:name="kr.hs.dgsw.juyeop.mymap.view.fragment.GpsFragment"
+        android:label="fragment_gps" />
     <fragment
         android:id="@+id/myInfoFragment"
         android:name="kr.hs.dgsw.juyeop.mymap.view.fragment.MyInfoFragment"
