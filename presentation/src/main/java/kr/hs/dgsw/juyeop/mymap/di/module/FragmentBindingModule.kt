@@ -16,7 +16,7 @@ abstract class FragmentBindingModule {
 
     @PerFragment
     @ContributesAndroidInjector
-    abstract fun bindingQrCodeFragment(): GpsFragment
+    abstract fun bindingGpsFragment(): GpsFragment
 
     @PerFragment
     @ContributesAndroidInjector
