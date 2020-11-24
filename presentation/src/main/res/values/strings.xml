@@ -1,7 +1,6 @@
 <resources>
-    <string name="app_name">MyMap</string>
-    <string name="app_name2">My Map</string>
-    <string name="app_name3">마이맵</string>
+    <string name="app_name">My Map</string>
+    <string name="app_name2">마이맵</string>
 
     <string name="menu_home">홈</string>
     <string name="menu_gps">GPS</string>

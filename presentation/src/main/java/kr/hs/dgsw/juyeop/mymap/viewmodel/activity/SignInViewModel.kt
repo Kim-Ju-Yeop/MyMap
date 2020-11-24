@@ -27,10 +27,11 @@ class SignInViewModel(
     fun postLogin() {
         isLoading.value = true
         val loginRequest = LoginRequest(email.value.toString(), password.value.toString())
+
         addDisposable(postLoginUseCase.buildUseCaseObservable(PostLoginUseCase.Params(loginRequest)), object : DisposableSingleObserver<Auth>() {
             override fun onSuccess(auth: Auth) {
-                isLoading.value = false
                 SharedPreferencesManager.setToken(context, auth.access_token)
+                isLoading.value = false
                 onSuccessEvent.call()
             }
             override fun onError(e: Throwable) {
