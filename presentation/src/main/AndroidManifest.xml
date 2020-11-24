@@ -15,17 +15,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.activity.MainActivity">
+        <activity android:name=".view.activity.MainActivity"/>
+        <activity android:name=".view.activity.SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activity.SignInActivity"/>
         <activity android:name=".view.activity.SplashActivity"/>
         <activity
             android:name=".view.activity.QrCodeActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="sensorPortrait"
             tools:replace="screenOrientation"/>
     </application>
 </manifest>

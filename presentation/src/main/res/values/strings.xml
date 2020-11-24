@@ -1,9 +1,17 @@
 <resources>
     <string name="app_name">MyMap</string>
+    <string name="app_name2">My Map</string>
+    <string name="app_name3">마이맵</string>
 
     <string name="menu_home">홈</string>
     <string name="menu_gps">GPS</string>
     <string name="menu_my_info">내 정보</string>
+
+    <string name="text_sign">로그인</string>
+    <string name="text_email">이메일</string>
+    <string name="text_password">비밀번호</string>
+    <string name="text_sign2">마이맵은 처음이신가요?</string>
+    <string name="text_register">회원가입</string>
 
     <string name="text_cancel">취소</string>
     <string name="text_next">확인</string>
