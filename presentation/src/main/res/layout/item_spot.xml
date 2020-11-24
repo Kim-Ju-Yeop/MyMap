@@ -26,7 +26,7 @@
             app:startLineColor="@color/colorGray"
             app:endLineColor="@color/colorGray"
             app:marker="@color/colorAccent"
-            app:lineStyle="dash"/>
+            app:lineOrientation="vertical"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/timeTextView"
@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
+            android:text="@={viewModel.time}"
             android:textSize="12sp"
             android:textColor="@android:color/black"
             android:textStyle="bold"
@@ -61,6 +62,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:text="@={viewModel.name}"
                     android:textColor="@android:color/black"
                     tools:text="대구소프트웨어고등학교"/>
 
@@ -70,6 +72,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:textSize="12sp"
+                    android:text="@={viewModel.address}"
                     tools:text="대구광역시 달성군 구지면 창리로11길 93"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>

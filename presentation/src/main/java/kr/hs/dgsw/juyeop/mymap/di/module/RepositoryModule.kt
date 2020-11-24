@@ -13,7 +13,7 @@ class RepositoryModule {
 
     @Singleton
     @Provides
-    fun provideSpotRepository(authRepositoryImpl: AuthRepositoryImpl): AuthRepository {
+    fun provideAuthRepository(authRepositoryImpl: AuthRepositoryImpl): AuthRepository {
         return authRepositoryImpl
     }
 

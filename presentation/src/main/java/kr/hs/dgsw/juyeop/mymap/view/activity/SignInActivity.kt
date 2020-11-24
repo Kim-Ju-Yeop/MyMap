@@ -1,6 +1,5 @@
 package kr.hs.dgsw.juyeop.mymap.view.activity
 
-import android.os.Bundle
 import kr.hs.dgsw.juyeop.mymap.base.view.BaseActivity
 import kr.hs.dgsw.juyeop.mymap.databinding.ActivitySignInBinding
 import kr.hs.dgsw.juyeop.mymap.viewmodel.activity.SignInViewModel
@@ -15,10 +14,6 @@ class SignInActivity : BaseActivity<ActivitySignInBinding, SignInViewModel>() {
 
     override val viewModel: SignInViewModel
         get() = getViewModel(viewModelFactory)
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun observerViewModel() {}
 }

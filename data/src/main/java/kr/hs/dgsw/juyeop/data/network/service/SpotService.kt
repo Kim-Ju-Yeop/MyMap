@@ -10,7 +10,7 @@ import retrofit2.http.*
 interface SpotService {
 
     @GET("logs")
-    fun getMySpot(@Query("data") date: String): Single<Response<List<SpotData>>>
+    fun getMySpot(@Query("date") date: String): Single<Response<List<SpotData>>>
 
     @GET("spot/{spot_id}")
     fun getSpot(@Path("spot_id") spot_id: Int): Single<Response<SpotData>>

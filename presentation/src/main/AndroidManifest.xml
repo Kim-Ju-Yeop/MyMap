@@ -3,8 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="kr.hs.dgsw.juyeop.mymap">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".widget.MyMapApplication"
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,12 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activity.SignInActivity" />
-        <activity android:name=".view.activity.SplashActivity" />
+        <activity android:name=".view.activity.SignInActivity"/>
+        <activity android:name=".view.activity.SplashActivity"/>
         <activity
             android:name=".view.activity.QrCodeActivity"
             android:screenOrientation="fullSensor"
             tools:replace="screenOrientation"/>
     </application>
-
 </manifest>

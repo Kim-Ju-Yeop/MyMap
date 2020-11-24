@@ -1,14 +1,15 @@
-package kr.hs.dgsw.juyeop.data.base
+package kr.hs.dgsw.juyeop.data.base.remote
 
 import io.reactivex.functions.Function
 import org.json.JSONObject
+import retrofit2.Response
 
 abstract class BaseRemote<SV> {
 
     abstract val service: SV
 
-    protected fun <T> getResponse(): Function<retrofit2.Response<T>, T> {
-        return Function { response: retrofit2.Response<T> ->
+    protected fun <T> getResponse(): Function<Response<T>, T> {
+        return Function { response: Response<T> ->
             checkError(response)
             response.body()
         }

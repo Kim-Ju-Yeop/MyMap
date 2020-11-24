@@ -2,7 +2,7 @@ package kr.hs.dgsw.juyeop.data.network.remote
 
 import io.reactivex.Completable
 import io.reactivex.Single
-import kr.hs.dgsw.juyeop.data.base.BaseRemote
+import kr.hs.dgsw.juyeop.data.base.remote.BaseRemote
 import kr.hs.dgsw.juyeop.data.entity.SpotData
 import kr.hs.dgsw.juyeop.data.network.service.SpotService
 import kr.hs.dgsw.juyeop.domain.request.SpotRequest

@@ -14,9 +14,7 @@ class RemoteModule {
 
     @Singleton
     @Provides
-    fun provideAuthRemote(retrofit: Retrofit): AuthRemote {
-        return AuthRemote(retrofit.create(AuthService::class.java))
-    }
+    fun provideAuthRemote(): AuthRemote = AuthRemote()
 
     @Singleton
     @Provides
