@@ -55,15 +55,47 @@
                 </LinearLayout>
             </androidx.appcompat.widget.Toolbar>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                tools:text="2020년 11월 24일"/>
+                android:layout_marginTop="25dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_left"
+                    android:tint="@android:color/black"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    tools:text="2020년 11월 24일"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right"
+                    android:tint="@android:color/black"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_spot"/>
         </LinearLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
