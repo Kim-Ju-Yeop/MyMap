@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -84,6 +85,9 @@ dependencies {
 
     // ZXing
     implementation "com.journeyapps:zxing-android-embedded:$rootProject.zxingVersion"
+
+    // Firebase
+    implementation platform("com.google.firebase:firebase-bom:$rootProject.firebaseBomVersion")
 
     implementation project(":data")
     implementation project(":domain")

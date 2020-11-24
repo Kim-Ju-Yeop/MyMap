@@ -1,6 +1,5 @@
 package kr.hs.dgsw.juyeop.mymap.viewmodel.fragment
 
-import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import io.reactivex.observers.DisposableSingleObserver
 import kr.hs.dgsw.juyeop.domain.entity.Spot
@@ -13,7 +12,6 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 class HomeViewModel(
-    private val context: Context,
     private val getMySpotUseCase: GetMySpotUseCase
 ) : BaseViewModel() {
 
@@ -32,16 +30,18 @@ class HomeViewModel(
     }
 
     fun getMySpot() {
+        isLoading.value = false
         addDisposable(getMySpotUseCase.buildUseCaseObservable(GetMySpotUseCase.Params(todayDate.value.toString())),
             object : DisposableSingleObserver<List<Spot>>() {
                 override fun onSuccess(spotList: List<Spot>) {
+                    isLoading.value = true
                     spotItemList.clear()
                     spotItemList.addAll(spotList)
                     spotItemAdapter.notifyDataSetChanged()
                 }
-
                 override fun onError(e: Throwable) {
-                    onErrorEvent.value = e
+                    isLoading.value = true
+                    e.printStackTrace()
                 }
             })
     }
