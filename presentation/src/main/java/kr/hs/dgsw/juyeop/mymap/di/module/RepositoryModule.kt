@@ -2,14 +2,8 @@ package kr.hs.dgsw.juyeop.mymap.di.module
 
 import dagger.Module
 import dagger.Provides
-import kr.hs.dgsw.juyeop.data.repository.AlertRepositoryImpl
-import kr.hs.dgsw.juyeop.data.repository.AuthRepositoryImpl
-import kr.hs.dgsw.juyeop.data.repository.MemberRepositoryImpl
-import kr.hs.dgsw.juyeop.data.repository.SpotRepositoryImpl
-import kr.hs.dgsw.juyeop.domain.repository.AlertRepository
-import kr.hs.dgsw.juyeop.domain.repository.AuthRepository
-import kr.hs.dgsw.juyeop.domain.repository.MemberRepository
-import kr.hs.dgsw.juyeop.domain.repository.SpotRepository
+import kr.hs.dgsw.juyeop.data.repository.*
+import kr.hs.dgsw.juyeop.domain.repository.*
 import javax.inject.Singleton
 
 @Module
@@ -37,5 +31,11 @@ class RepositoryModule {
     @Provides
     fun provideAlertRepository(alertRepositoryImpl: AlertRepositoryImpl): AlertRepository {
         return alertRepositoryImpl
+    }
+
+    @Singleton
+    @Provides
+    fun providerStatusRepository(statusRepositoryImpl: StatusRepositoryImpl): StatusRepository {
+        return statusRepositoryImpl
     }
 }
