@@ -3,6 +3,7 @@ package kr.hs.dgsw.juyeop.mymap.view.activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import androidx.lifecycle.Observer
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_qr_code.*
 import kr.hs.dgsw.juyeop.mymap.base.view.BaseActivity
@@ -28,17 +29,27 @@ class QrCodeActivity : BaseActivity<ActivityQrCodeBinding, QrCodeViewModel>(){
         intentIntegrator.initiateScan()
     }
 
-    override fun observerViewModel() {}
+    override fun observerViewModel() {
+        with(viewModel) {
+            onCancelEvent.observe(this@QrCodeActivity, Observer {
+                onBackPressed()
+            })
+            onNextEvent.observe(this@QrCodeActivity, Observer {
+                postSpot()
+            })
+            onSuccessEvent.observe(this@QrCodeActivity, Observer {
+                onBackPressed()
+            })
+        }
+    }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
         if (result != null) {
             if (result.contents == null) {
                 onBackPressed()
-                Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show()
             } else {
-                storeNameTextView.text = result.contents
-                storeAddressTextView.text = result.contents
-                Toast.makeText(this, "Scanned : " + result.contents, Toast.LENGTH_LONG).show()
+                viewModel.spot_id = result.contents
+                viewModel.getSpot()
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data)

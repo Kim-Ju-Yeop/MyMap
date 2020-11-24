@@ -11,7 +11,7 @@ class SpotItemViewModel : BaseViewModel() {
     val address = MutableLiveData<String>()
 
     fun bind(spot: Spot) {
-        time.value = spot.visited_at.substring(11, 16)
+        time.value = spot.visited_at?.substring(11, 16)
         name.value = spot.spot_name
         address.value = spot.address
     }

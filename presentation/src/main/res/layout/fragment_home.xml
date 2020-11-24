@@ -69,6 +69,7 @@
                     android:tint="@android:color/black"
                     android:layout_gravity="center"
                     android:layout_marginEnd="10dp"
+                    android:onClick="@{() -> viewModel.backEvent()}"
                     tools:ignore="ContentDescription" />
 
                 <TextView
@@ -78,6 +79,7 @@
                     android:textSize="20sp"
                     android:textColor="@android:color/black"
                     android:textStyle="bold"
+                    android:onClick="@{() -> viewModel.datePickerEvent()}"
                     tools:text="2020-11-24"/>
 
                 <ImageView
@@ -87,6 +89,7 @@
                     android:tint="@android:color/black"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
+                    android:onClick="@{() -> viewModel.nextEvent()}"
                     tools:ignore="ContentDescription" />
             </LinearLayout>
 

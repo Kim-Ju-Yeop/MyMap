@@ -28,6 +28,7 @@
                 android:id="@+id/storeNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@={viewModel.name}"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -37,6 +38,7 @@
                 android:id="@+id/storeAddressTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@={viewModel.address}"
                 android:textSize="14sp"
                 android:layout_marginTop="5dp"
                 tools:text="대구광역시 현풍군 구지 11길" />
@@ -55,7 +57,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginBottom="25dp"
-                tools:text="취소"/>
+                android:text="@string/text_cancel"
+                android:onClick="@{() -> viewModel.cancelEvent()}"/>
 
             <View
                 android:layout_width="0dp"
@@ -67,7 +70,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
                 android:layout_marginBottom="25dp"
-                tools:text="확인"/>
+                android:text="@string/text_next"
+                android:onClick="@{() -> viewModel.nextEvent()}"/>
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

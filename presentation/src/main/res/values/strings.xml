@@ -4,4 +4,7 @@
     <string name="menu_home">홈</string>
     <string name="menu_gps">GPS</string>
     <string name="menu_my_info">내 정보</string>
+
+    <string name="text_cancel">취소</string>
+    <string name="text_next">확인</string>
 </resources>

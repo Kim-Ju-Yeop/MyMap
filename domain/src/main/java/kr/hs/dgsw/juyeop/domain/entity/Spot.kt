@@ -5,5 +5,5 @@ data class Spot(
     val address: String,
     val latitude: String,
     val longitude: String,
-    val visited_at: String
+    val visited_at: String?
 )
