@@ -13,8 +13,12 @@ class SpotDataSource @Inject constructor(
     override val cache: Any
 ): BaseDataSource<SpotRemote, Any>() {
 
-    fun getSpot(date: String): Single<List<SpotData>> {
-        return remote.getSpot(date)
+    fun getMySpot(date: String): Single<List<SpotData>> {
+        return remote.getMySpot(date)
+    }
+
+    fun getSpot(spot_id: Int): Single<SpotData> {
+        return remote.getSpot(spot_id)
     }
 
     fun postSpot(spotRequest: SpotRequest): Completable {

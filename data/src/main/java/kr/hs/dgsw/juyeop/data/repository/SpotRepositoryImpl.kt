@@ -13,8 +13,12 @@ class SpotRepositoryImpl @Inject constructor(
     private val spotDataSource: SpotDataSource
 ): SpotRepository {
 
-    override fun getSpot(date: String): Single<List<Spot>> {
-        return spotDataSource.getSpot(date).map { spot -> spot.map { it.toEntity() } }
+    override fun getMySpot(date: String): Single<List<Spot>> {
+        return spotDataSource.getMySpot(date).map { spot -> spot.map { it.toEntity() } }
+    }
+
+    override fun getSpot(spot_id: Int): Single<Spot> {
+        return spotDataSource.getSpot(spot_id).map { spot -> spot.toEntity() }
     }
 
     override fun postSpot(spotRequest: SpotRequest): Completable {

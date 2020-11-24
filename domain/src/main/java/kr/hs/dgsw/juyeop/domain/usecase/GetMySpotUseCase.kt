@@ -6,15 +6,15 @@ import kr.hs.dgsw.juyeop.domain.entity.Spot
 import kr.hs.dgsw.juyeop.domain.repository.SpotRepository
 import javax.inject.Inject
 
-class GetSpotUseCase @Inject constructor(
+class GetMySpotUseCase @Inject constructor(
     private val spotRepository: SpotRepository
-): ParamUseCase<GetSpotUseCase.Params, Single<Spot>>() {
+): ParamUseCase<GetMySpotUseCase.Params, Single<List<Spot>>>() {
 
-    override fun buildUseCaseObservable(params: Params): Single<Spot> {
-        return spotRepository.getSpot(params.spot_id)
+    override fun buildUseCaseObservable(params: Params): Single<List<Spot>> {
+        return spotRepository.getMySpot(params.date)
     }
 
     data class Params(
-        val spot_id: Int
+        val date: String
     )
 }

@@ -7,7 +7,9 @@ import kr.hs.dgsw.juyeop.domain.request.SpotRequest
 
 interface SpotRepository {
 
-    fun getSpot(date: String): Single<List<Spot>>
+    fun getMySpot(date: String): Single<List<Spot>>
+
+    fun getSpot(spot_id: Int): Single<Spot>
 
     fun postSpot(spotRequest: SpotRequest): Completable
 }

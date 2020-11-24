@@ -9,8 +9,12 @@ import kr.hs.dgsw.juyeop.domain.request.SpotRequest
 
 class SpotRemote(override val service: SpotService) : BaseRemote<SpotService>() {
 
-    fun getSpot(date: String): Single<List<SpotData>> {
-        return service.getSpot(date).map(getResponse())
+    fun getMySpot(date: String): Single<List<SpotData>> {
+        return service.getMySpot(date).map(getResponse())
+    }
+
+    fun getSpot(spot_id: Int): Single<SpotData> {
+        return service.getSpot(spot_id).map(getResponse())
     }
 
     fun postSpot(spotRequest: SpotRequest): Completable {
