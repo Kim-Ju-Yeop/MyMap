@@ -52,6 +52,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_notification"
                         android:layout_marginEnd="20dp"
+                        android:onClick="@{() -> viewModel.alertEvent()}"
                         tools:ignore="ContentDescription" />
                 </LinearLayout>
             </androidx.appcompat.widget.Toolbar>

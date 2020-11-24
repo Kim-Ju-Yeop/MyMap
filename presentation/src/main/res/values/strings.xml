@@ -12,6 +12,9 @@
     <string name="text_sign2">마이맵은 처음이신가요?</string>
     <string name="text_register">회원가입</string>
 
+    <string name="text_alert">확진자 알림</string>
+    <string name="text_correct">확진자 동선과 일치</string>
+
     <string name="text_cancel">취소</string>
     <string name="text_next">확인</string>
 

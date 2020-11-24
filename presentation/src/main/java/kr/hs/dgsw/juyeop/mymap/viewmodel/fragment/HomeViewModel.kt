@@ -23,6 +23,7 @@ class HomeViewModel(
     val todayDate = MutableLiveData<String>()
     val onQrCodeEvent = SingleLiveEvent<Unit>()
     val onDatePickerEvent = SingleLiveEvent<Unit>()
+    val onAlertEvent = SingleLiveEvent<Unit>()
 
     init {
         todayDate.value = calendar.time.dateFormat()
@@ -76,5 +77,9 @@ class HomeViewModel(
 
         todayDate.value = "${calendar.get(Calendar.YEAR)}-$formatMonth-$formatDay"
         getMySpot()
+    }
+
+    fun alertEvent() {
+        onAlertEvent.call()
     }
 }

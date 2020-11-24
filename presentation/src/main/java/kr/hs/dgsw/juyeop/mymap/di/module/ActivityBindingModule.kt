@@ -3,10 +3,7 @@ package kr.hs.dgsw.juyeop.mymap.di.module
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import kr.hs.dgsw.juyeop.mymap.di.scope.PerActivity
-import kr.hs.dgsw.juyeop.mymap.view.activity.MainActivity
-import kr.hs.dgsw.juyeop.mymap.view.activity.QrCodeActivity
-import kr.hs.dgsw.juyeop.mymap.view.activity.SignInActivity
-import kr.hs.dgsw.juyeop.mymap.view.activity.SplashActivity
+import kr.hs.dgsw.juyeop.mymap.view.activity.*
 
 @Module
 abstract class ActivityBindingModule {
@@ -26,4 +23,8 @@ abstract class ActivityBindingModule {
     @PerActivity
     @ContributesAndroidInjector
     abstract fun bindingQrCodeActivity(): QrCodeActivity
+
+    @PerActivity
+    @ContributesAndroidInjector
+    abstract fun bindingAlertActivity(): AlertActivity
 }
