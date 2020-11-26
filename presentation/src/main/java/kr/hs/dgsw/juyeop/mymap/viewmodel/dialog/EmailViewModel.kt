@@ -13,6 +13,8 @@ class EmailViewModel(
 
     val email = MutableLiveData<String>()
     val onDismissEvent = SingleLiveEvent<Unit>()
+    val onCompleteEvent = SingleLiveEvent<Unit>()
+    val onFailureEvent = SingleLiveEvent<Unit>()
 
     fun cancelEvent() {
         onDismissEvent.call()
@@ -21,9 +23,10 @@ class EmailViewModel(
         val statusRequest = StatusRequest(email.value.toString())
         addDisposable(postInfectionUseCase.buildUseCaseObservable(PostInfectionUseCase.Params(statusRequest)), object : DisposableCompletableObserver() {
             override fun onComplete() {
-                onDismissEvent.call()
+                onCompleteEvent.call()
             }
             override fun onError(e: Throwable) {
+                onFailureEvent.call()
                 e.printStackTrace()
             }
         })

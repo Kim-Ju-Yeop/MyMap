@@ -48,14 +48,6 @@ abstract class BaseDialog<VB : ViewDataBinding, VM : BaseViewModel>: DaggerDialo
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(root)
 
-        if (dialog.window != null) {
-            dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-            dialog.window!!.setLayout(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-            )
-            dialog.window!!.setGravity(Gravity.BOTTOM)
-        }
         return dialog
     }
 

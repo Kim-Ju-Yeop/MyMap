@@ -18,6 +18,8 @@
     <string name="text_cancel">취소</string>
     <string name="text_next">확인</string>
 
+    <string name="text_gps">확진자 동선</string>
+
     <string name="text_my_info">MY</string>
     <string name="text_blood">혈액형</string>
     <string name="text_address">주소</string>
