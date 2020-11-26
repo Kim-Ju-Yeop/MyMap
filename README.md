@@ -36,3 +36,13 @@
 ## Design Pattern
 - MVVM 디자인 패턴을 활용하여 구현했습니다.
 - CleanArchitecture 구조에 맞게 코드를 구현했습니다.
+
+## UI/UX
+<div>
+<img width="130" src="https://user-images.githubusercontent.com/49600974/100354163-0d53e780-3033-11eb-96b2-3f28618bcbb4.jpeg"></img>
+<img width="130" src="https://user-images.githubusercontent.com/49600974/100354323-560ba080-3033-11eb-9ab9-20522d31a3e9.jpeg"></img>
+<img width="130" src="https://user-images.githubusercontent.com/49600974/100354207-1fce2100-3033-11eb-8230-68b3723bfbf2.jpeg"></img>
+<img width="130" src="https://user-images.githubusercontent.com/49600974/100354224-278dc580-3033-11eb-917f-a788233ae081.jpeg"></img>
+<img width="130" src="https://user-images.githubusercontent.com/49600974/100354246-2fe60080-3033-11eb-85c2-f3553b516084.jpeg"></img>
+<img width="130" src="https://user-images.githubusercontent.com/49600974/100354247-31172d80-3033-11eb-9d10-c36b4b66f764.jpeg"></img>
+</div>
