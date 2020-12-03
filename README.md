@@ -35,7 +35,7 @@
 
 ## Design Pattern
 - MVVM 디자인 패턴을 활용하여 구현했습니다.
-- CleanArchitecture 구조에 맞게 코드를 구현했습니다.
+- CleanArchitecture 구조에 맞게 코드를 구현했습니다
 
 ## UI/UX
 <div>
